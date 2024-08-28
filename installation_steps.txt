@@ -1,0 +1,32 @@
+---------preliminary steps-------------
+
+
+for "yum update"
+
+into /etc/resolv.conf
+
+search athtem.ericsson.se athtem.eei.ericsson.se
+nameserver 159.107.173.12
+nameserver 159.107.173.3
+
+-----------------mongodb----------------
+
+/etc/yum.repos.d/mongodb-org-3.4.repo
+
+[mongodb-org-3.4]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+
+yum install -y mongodb-org
+
+service mongod start
+
+
+-----------------flask & pymongo----------------
+
+pip install Flask
+pip install pymongo
+

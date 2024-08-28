@@ -1,0 +1,3 @@
+mongoimport -d jenkins -c total_stats --headerline --type csv --file total_stats.csv 
+
+mongoimport -d jenkins -c builds --headerline --type csv --file builds.csv

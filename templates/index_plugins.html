@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <!-- The required rel attribute specifies the relationship between the current document and the linked document/resource -->
+  <link rel="stylesheet" href="./static/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+
+</head>
+<!-- The HTML class attribute makes it possible to define equal styles for elements with the same class name. https://www.w3schools.com/html/html_classes.asp -->
+<body class="application">
+  <!-- The navigation bar can also be fixed at the top or at the bottom of the page. https://www.w3schools.com/bootstrap/bootstrap_navbar.asp-->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid"> <!-- The .container-fluid class provides a full width container, spanning the entire width of the viewport https://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">AXIS-OPS Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+        <div class="container">
+        <script type="text/javascript" src="header.js"></script>
+          <p><b>Plugin availability</b></p>
+          <div id="select1">
+            <div class="chart-title">
+                Jenkins instance
+            </div>
+            <div>
+              <a class='reset'
+                 href='javascript:select1.filterAll();dc.redrawAll();'
+                 style='visibility: hidden;'>reset</a>
+            </div>
+          </div>
+          <div id="select2">
+            <div class="chart-title">
+                Plugin reference
+            </div>
+            <div>
+              <a class='reset'
+                 href='javascript:select2.filterAll();dc.redrawAll();'
+                 style='visibility: hidden;'>reset</a>
+            </div>
+          </div>
+          <div id="select3">
+            <div class="chart-title">
+                Plugin status
+            </div>
+            <div>
+              <a class='reset'
+                 href='javascript:select3.filterAll();dc.redrawAll();'
+                 style='visibility: hidden;'>reset</a>
+            </div>
+          </div>
+        <div style="clear: both"></div>
+        <div id="datatable">
+        <thead>
+            <tr>
+              <th>Plugin</th>
+              <th>Version</th>
+            </tr>
+        </thead>        
+        </div>
+
+  </div>
+
+  </div>
+
+  <script src="./static/lib/js/jquery.min.js"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+  <script src="./static/lib/js/queue.js"></script>
+
+  <script src="./static/lib/js/keen.min.js"></script>
+  <script src='./static/js/graphs_plugins.js' type='text/javascript'></script>
+</body>
+</html>

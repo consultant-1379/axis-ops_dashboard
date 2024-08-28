@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <!-- The required rel attribute specifies the relationship between the current document and the linked document/resource -->
+  <link rel="stylesheet" href="./static/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+</head>
+<!-- The HTML class attribute makes it possible to define equal styles for elements with the same class name. https://www.w3schools.com/html/html_classes.asp -->
+<body class="application">
+  <!-- The navigation bar can also be fixed at the top or at the bottom of the page. https://www.w3schools.com/bootstrap/bootstrap_navbar.asp-->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid"> <!-- The .container-fluid class provides a full width container, spanning the entire width of the viewport https://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">MT nodes Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- how to get a 'n' equal-width columns starting at tablets and scaling to large desktops. -->
+    <div class="row">
+
+      <div class="col-sm-12">
+        <div class="row">
+        
+          <!-- Issue Type Chart --> 
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                <b><abbr title="insert here details">Choose issue type</abbr></b>
+              </div>
+              <div class="chart-stage">
+                <div id="issue-type-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Issue Type Chart -->
+        
+          <!-- Time Chart --> 
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                <b><abbr title="insert here details">Distribution of Jenkins node</abbr></b>
+              </div>
+              <div class="chart-stage">
+                <div id="time-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Time Chart -->
+          
+        </div>
+      </div>
+     
+    </div>
+  </div>
+
+  <script src="./static/lib/js/jquery.min.js"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+  <script src="./static/lib/js/queue.js"></script>
+
+  <script src="./static/lib/js/keen.min.js"></script>
+  <script src='./static/js/graphs_mtslaves.js' type='text/javascript'></script>
+</body>
+</html>

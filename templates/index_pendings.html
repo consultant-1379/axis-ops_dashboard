@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <!-- The required rel attribute specifies the relationship between the current document and the linked document/resource -->
+  <link rel="stylesheet" href="./static/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+</head>
+<!-- The HTML class attribute makes it possible to define equal styles for elements with the same class name. https://www.w3schools.com/html/html_classes.asp -->
+<body class="application">
+  <!-- The navigation bar can also be fixed at the top or at the bottom of the page. https://www.w3schools.com/bootstrap/bootstrap_navbar.asp-->
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid"> <!-- The .container-fluid class provides a full width container, spanning the entire width of the viewport https://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">AXIS-OPS Dashboard</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- how to get a 'n' equal-width columns starting at tablets and scaling to large desktops. -->
+    <div class="row">
+
+      <div class="col-sm-12">
+        <div class="row">
+        
+          <!-- Time Chart --> 
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                <b><abbr title="insert here details">Distribution of pending/hanging builds</abbr></b>
+              </div>
+              <div class="chart-stage">
+                <div id="time-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Time Chart -->
+          
+          <!-- Issue Type Chart --> 
+          <div class="col-sm-12">
+            <div class="chart-wrapper">
+              <div class="chart-title">
+                <b><abbr title="insert here details">Choose issue type</abbr></b>
+              </div>
+              <div class="chart-stage">
+                <div id="issue-type-chart"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Issue Type Chart -->
+
+          <!-- Map  -->
+          <div class="col-sm-12">
+            <div class="chart-wrapper">            
+              <div class="chart-title">
+                <b><abbr title="insert here details">Distribution of pending/hanging builds among Jenkins instances</abbr></b>
+              </div>              
+              <div class="chart-stage">
+                <div id="map-chart"></div>
+              </div>             
+            </div>
+          </div>
+          <!-- Map -->
+          
+        </div>
+      </div>
+      
+      <!-- Root Cause Bar Chart -->
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <b><abbr title="insert here details">Root cause</abbr></b>
+          </div>
+          <div class="chart-stage">
+            <div id="root-cause-chart"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Root Cause Bar Chart -->
+      
+      <!-- Jenkins Node reference -->
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <b><abbr title="insert here details">Jenkins Node reference</abbr></b>
+          </div>
+          <div class="chart-stage">
+            <div id="jenkins-node-reference-chart"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Jenkins Node reference -->
+      
+      <!-- Jenkins Job reference -->
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <b><abbr title="insert here details">Jenkins Jobs Name reference (overview)</abbr></b>
+          </div>
+          <div class="chart-stage">
+            <div id="jenkins-job-reference-chart"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Jenkins Job reference -->
+      
+      <!-- Total number of pending/hanging Jenkins Jobs -->
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            <b><abbr title="insert here details">Total number of pending/hanging Jenkins Jobs</abbr></b>
+          </div>
+          <div class="chart-stage">
+            <div id="number-projects-nd"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Total number of pending/hanging Jenkins Jobs -->
+      
+        <div style="float: left">
+            <button class="btn" id="download"><abbr title="insert here details">download</abbr></button>
+        </div>      
+    </div>
+  </div>
+
+  <script src="./static/lib/js/jquery.min.js"></script>
+  <script src="./static/lib/js/bootstrap.min.js"></script>
+  <script src="./static/lib/js/crossfilter.js"></script>
+  <script src="./static/lib/js/d3.js"></script>
+  <script src="./static/lib/js/dc.js"></script>
+  <script src="./static/lib/js/queue.js"></script>
+  <script src="./static/lib/js/FileSaver.js"></script>
+
+  <script src="./static/lib/js/keen.min.js"></script>
+  <script src='./static/js/graphs_pendings.js' type='text/javascript'></script>
+</body>
+</html>

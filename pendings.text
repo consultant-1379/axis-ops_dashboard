@@ -1,0 +1,14 @@
+fem,jobname,status,time,rootcause,counter
+101,IDE-Installer_Windows_PreCodeReview,pending,2018-03-15 09:21:09,offline node,1
+104,ERICrhel74lvsrouterimage_CXP9035115_Release,pending,2018-03-19 12:12:21,offline node,1
+111,EXTRlitpcloudinit_dBranches,pending,2018-02-24 19:03:00,missing node,1
+114,APT_Run_Workload_Assertions_II,pending,2018-03-21 23:11:52,quiet period,1
+114,APT_Run_KPI_Assertions,pending,2018-03-21 23:11:51,quiet period,1
+115,TAF_team_Genoa,pending,2018-03-22 00:10:00,offline node,1
+115,Deployment_Tribe_235_KGB_Install,hanging,2018-03-21 20:42:27,delayed
+116,Backup_DM_Neo4jDatabase,pending,2018-03-16 01:53:01,offline node,1
+119,TDM-FB-Functional-Tests-Prod,pending,2018-03-22 08:58:10,quiet period,1
+135,The16thFloor_Full_vApp_KGB+N,pending,2018-03-22 08:20:37,Waiting for next available executor,1
+135,Quasar_Full_vApp_KGB+N,pending,2018-03-22 06:53:00,Waiting for next available executor,1
+135,Zora_Full_vApp_KGB+N,pending,2018-03-22 08:11:01,Waiting for next available executor,1
+135,Raisers_Full_vApp_KGB+N,pending,2018-03-22 05:53:29,Waiting for next available executor,1
